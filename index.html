@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shivansh Makwana — Full-Stack Developer | SGSITS</title>
+    <meta name="description"
+        content="Shivansh Makwana — 2nd Year CS @ SGSITS. Full-Stack Developer crushing frontend, conquering backend, and leveraging AI to ship faster. Available for internships." />
+    <meta name="keywords"
+        content="Shivansh Makwana, Full Stack Developer, SGSITS, React Developer, Frontend Developer, Portfolio, Web Developer India" />
+    <meta name="author" content="Shivansh Makwana" />
+    <meta property="og:title" content="Shivansh Makwana — Full-Stack Developer" />
+    <meta property="og:description"
+        content="2nd Year CS Student @ SGSITS building scalable products, crushing DSA, and leveraging AI for next-level development." />
+    <meta property="og:type" content="website" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- ============ LOADER ============ -->
+    <div id="loader" class="loader">
+        <div class="loader-inner">
+            <div class="loader-ring"></div>
+            <div class="loader-ring loader-ring--2"></div>
+            <div class="loader-text"><span class="mono">initializing</span><span class="loader-dots">...</span></div>
+        </div>
+    </div>
+
+    <!-- ============ CURSOR ============ -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <!-- ============ NAV ============ -->
+    <nav class="nav" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo" id="nav-logo">
+                <span class="logo-bracket">&lt;</span>SM<span class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about" class="nav-link" data-text="About">About</a></li>
+                <li><a href="#skills" class="nav-link" data-text="Skills">Skills</a></li>
+                <li><a href="#projects" class="nav-link" data-text="Projects">Projects</a></li>
+                <li><a href="#journey" class="nav-link" data-text="Journey">Journey</a></li>
+                <li><a href="#contact" class="nav-link" data-text="Contact">Contact</a></li>
+            </ul>
+            <a href="https://github.com/shivanshmakwana913-droid" target="_blank" rel="noopener" class="nav-cta"
+                id="nav-cta">
+                <span>GitHub</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.929.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                </svg>
+            </a>
+            <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-canvas" id="hero-canvas"></div>
+        <div class="hero-particles" id="particles"></div>
+
+        <div class="hero-content">
+            <div class="hero-badge" id="hero-badge">
+                <span class="badge-dot"></span>
+                <span class="mono">Available for Internships · 2026</span>
+            </div>
+
+            <h1 class="hero-headline" id="hero-headline">
+                I Don't Just<br />
+                <span class="headline-gradient" id="typed-text"></span>
+                <span class="cursor-blink">|</span>
+            </h1>
+
+            <p class="hero-sub" id="hero-sub">
+                Full-Stack Dev in the making &nbsp;·&nbsp; Frontend <span class="text-glow">Mastered</span>
+                &nbsp;·&nbsp; Backend <span class="text-glow-amber">Unlocking</span> &nbsp;·&nbsp; AI-Powered <span
+                    class="text-glow-pink">Always</span>
+            </p>
+
+            <div class="hero-meta mono" id="hero-meta">
+                <span>B.Tech CS · 4th Sem · SGSITS Ujjain</span>
+                <span class="hero-meta-sep">——</span>
+                <span>Building things that <em>actually matter</em></span>
+            </div>
+
+            <div class="hero-actions" id="hero-actions">
+                <a href="#projects" class="btn btn-primary" id="btn-projects">
+                    <span>View My Work</span>
+                    <div class="btn-glow"></div>
+                </a>
+                <a href="https://github.com/shivanshmakwana913-droid" target="_blank" rel="noopener"
+                    class="btn btn-ghost" id="btn-github">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.929.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                    </svg>
+                    <span>GitHub</span>
+                </a>
+                <a href="#contact" class="btn btn-ghost" id="btn-contact">
+                    <span>Let's Build →</span>
+                </a>
+            </div>
+
+            <div class="hero-stats" id="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-num">2+</span>
+                    <span class="stat-label">Years Coding</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-num">10+</span>
+                    <span class="stat-label">Projects Built</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-num">AI</span>
+                    <span class="stat-label">Powered Dev</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-num">∞</span>
+                    <span class="stat-label">Hunger to Learn</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-image-wrap" id="hero-image-wrap">
+            <div class="hero-img-ring ring-1"></div>
+            <div class="hero-img-ring ring-2"></div>
+            <div class="hero-img-ring ring-3"></div>
+            <img src="assets/profile.png" alt="Shivansh Makwana" class="hero-avatar" id="hero-avatar" loading="eager" />
+            <div class="hero-img-badge">
+                <span class="mono">// Full-Stack Dev</span>
+            </div>
+        </div>
+
+        <div class="hero-scroll-hint">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-label mono">
+                <span class="label-line"></span>
+                <span>01 &nbsp;/&nbsp; about_me.js</span>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-text reveal-left">
+                    <h2 class="section-title">Not Your Average<br /><span class="gradient-text">CS Student.</span></h2>
+
+                    <p class="about-p">
+                        I'm <strong>Shivansh Makwana</strong> — a 2nd-year B.Tech Computer Science student at
+                        <strong>SGSITS, Ujjain</strong>, and I'm building things most seniors haven't touched yet.
+                    </p>
+
+                    <p class="about-p">
+                        While others are still figuring out pointers, I've already shipped real-world projects with
+                        <strong>React, JavaScript, and live external APIs</strong>. My frontend game is locked in —
+                        pixel-perfect UIs, smooth animations, component architecture that actually scales.
+                    </p>
+
+                    <p class="about-p">
+                        Right now? I'm in the trenches <strong>mastering backend development</strong> — databases,
+                        server logic, REST APIs — because a half-stack developer isn't a developer at all. I'm going all
+                        the way.
+                    </p>
+
+                    <p class="about-p">
+                        I also don't code the old way. I use <strong>OpenAI and Google AI</strong> to supercharge my
+                        workflows, ship faster, and build smarter. I'm not replacing my brain with AI — I'm multiplying
+                        it.
+                    </p>
+
+                    <p class="about-p">
+                        Outside code? I create <strong>digital art on Redbubble</strong> — which means my eye for design
+                        runs deep. That creative instinct shows up in every UI I build.
+                    </p>
+
+                    <div class="about-pill-row">
+                        <span class="about-pill">🎓 SGSITS Ujjain</span>
+                        <span class="about-pill">🧠 DSA on GeeksforGeeks</span>
+                        <span class="about-pill">🎨 Digital Artist · Redbubble</span>
+                        <span class="about-pill">⚡ AI-Powered Dev</span>
+                    </div>
+                </div>
+
+                <div class="about-code-card reveal-right">
+                    <div class="code-card">
+                        <div class="code-card-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            <span class="code-file mono">shivansh.config.js</span>
+                        </div>
+                        <pre class="code-body"><code><span class="c-keyword">const</span> <span class="c-var">shivansh</span> = {
+  <span class="c-key">name</span>: <span class="c-str">"Shivansh Makwana"</span>,
+  <span class="c-key">role</span>: <span class="c-str">"Emerging Full-Stack Dev"</span>,
+  <span class="c-key">college</span>: <span class="c-str">"SGSITS, Ujjain"</span>,
+  <span class="c-key">year</span>: <span class="c-num">2</span>, <span class="c-comment">// 4th Semester</span>
+  <span class="c-key">frontend</span>: <span class="c-str">"MASTERED ✅"</span>,
+  <span class="c-key">backend</span>: <span class="c-str">"CONQUERING 🔥"</span>,
+  <span class="c-key">aiUsage</span>: <span class="c-str">"DAILY ⚡"</span>,
+  <span class="c-key">openTo</span>: [
+    <span class="c-str">"Internships"</span>,
+    <span class="c-str">"Open Source"</span>,
+    <span class="c-str">"Collabs"</span>,
+  ],
+  <span class="c-key">superpower</span>: <span class="c-str">"Ship fast, ship right"</span>,
+  <span class="c-key">status</span>: <span class="c-str">"Building in public 🚀"</span>,
+};</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <div class="section-label mono">
+                <span class="label-line"></span>
+                <span>02 &nbsp;/&nbsp; tech_stack.json</span>
+            </div>
+
+            <h2 class="section-title reveal-up">My Arsenal.<br /><span class="gradient-text">Built to Scale.</span></h2>
+            <p class="section-sub reveal-up">From pixel-perfect interfaces to AI-augmented development workflows —
+                here's what I'm packing.</p>
+
+            <div class="skills-tabs reveal-up" id="skills-tabs">
+                <button class="tab-btn active" data-tab="frontend" id="tab-frontend">Frontend 💻</button>
+                <button class="tab-btn" data-tab="backend" id="tab-backend">Backend ⚙️</button>
+                <button class="tab-btn" data-tab="ai" id="tab-ai">AI & Tools 🤖</button>
+                <button class="tab-btn" data-tab="cs" id="tab-cs">CS Core 🧠</button>
+            </div>
+
+            <div class="skills-panel active" data-panel="frontend" id="panel-frontend">
+                <div class="skills-grid">
+                    <div class="skill-card mastered" data-level="Mastered">
+                        <div class="skill-icon">🌐</div>
+                        <h3>HTML5</h3>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="--fill: 95%"></div>
+                        </div>
+                        <span class="skill-tag">Mastered</span>
+                    </div>
+                    <div class="skill-card mastered" data-level="Mastered">
+                        <div class="skill-icon">🎨</div>
+                        <h3>CSS3 & Animations</h3>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="--fill: 90%"></div>
+                        </div>
+                        <span class="skill-tag">Mastered</span>
+                    </div>
+                    <div class="skill-card mastered" data-level="Mastered">
+                        <div class="skill-icon">⚡</div>
+                        <h3>JavaScript (ES6+)</h3>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="--fill: 88%"></div>
+                        </div>
+                        <span class="skill-tag">Mastered</span>
+                    </div>
+                    <div class="skill-card mastered" data-level="Mastered">
+                        <div class="skill-icon">⚛️</div>
+                        <h3>React.js</h3>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="--fill: 82%"></div>
+                        </div>
+                        <span class="skill-tag">Mastered</span>
+                    </div>
+                    <div class="skill-card learning" data-level="Growing">
+                        <div class="skill-icon">💅</div>
+                        <h3>Tailwind CSS</h3>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="--fill: 78%"></div>
+                        </div>
+                        <span class="skill-tag learning-tag">Growing</span>
+                    </div>
+                    <div class="skill-card mastered" data-level="Mastered">
+                        <div class="skill-icon">🔗</div>
+                        <h3>REST APIs (Fetch/Axios)</h3>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="--fill: 85%"></div>
+                        </div>
+                        <span class="skill-tag">Mastered</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-panel" data-panel="backend" id="panel-backend">
+                <div class="skills-grid">
+                    <div class="skill-card learning" data-level="Conquering">
+                        <div class="skill-icon">🟩</div>
+                        <h3>Node.js</h3>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="--fill: 60%"></div>
+                        </div>
+                        <span class="skill-tag learning-tag">Conquering 🔥</span>
+                    </div>
+                    <div class="skill-card learning" data-level="Conquering">
+                        <div class="skill-icon">🚂</div>
+                        <h3>Express.js</h3>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="--fill: 55%"></div>
+                        </div>
+                        <span class="skill-tag learning-tag">Conquering 🔥</span>
+                    </div>
+                    <div class="skill-card learning" data-level="Exploring">
+                        <div class="skill-icon">🍃</div>
+                        <h3>MongoDB</h3>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="--fill: 50%"></div>
+                        </div>
+                        <span class="skill-tag learning-tag">Exploring</span>
+                    </div>
+                    <div class="skill-card learning" data-level="Exploring">
+                        <div class="skill-icon">🐬</div>
+                        <h3>SQL / MySQL</h3>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="--fill: 55%"></div>
+                        </div>
+                        <span class="skill-tag learning-tag">Exploring</span>
+                    </div>
+                    <div class="skill-card learning" data-level="Learning">
+                        <div class="skill-icon">🔐</div>
+                        <h3>Auth & JWT</h3>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="--fill: 45%"></div>
+                        </div>
+                        <span class="skill-tag learning-tag">Learning</span>
+                    </div>
+                    <div class="skill-card mastered" data-level="Applied">
+                        <div class="skill-icon">🔁</div>
+                        <h3>API Integration</h3>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="--fill: 85%"></div>
+                        </div>
+                        <span class="skill-tag">Applied ✅</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-panel" data-panel="ai" id="panel-ai">
+                <div class="skills-grid">
+                    <div class="skill-card mastered" data-level="Daily Use">
+                        <div class="skill-icon">🤖</div>
+                        <h3>OpenAI / ChatGPT</h3>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="--fill: 90%"></div>
+                        </div>
+                        <span class="skill-tag">Daily Use</span>
+                    </div>
+                    <div class="skill-card mastered" data-level="Daily Use">
+                        <div class="skill-icon">🌟</div>
+                        <h3>Google AI Pro / Gemini</h3>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="--fill: 88%"></div>
+                        </div>
+                        <span class="skill-tag">Daily Use</span>
+                    </div>
+                    <div class="skill-card mastered" data-level="Active">
+                        <div class="skill-icon">💻</div>
+                        <h3>AI Code Generators</h3>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="--fill: 85%"></div>
+                        </div>
+                        <span class="skill-tag">Active</span>
+                    </div>
+                    <div class="skill-card mastered" data-level="Active">
+                        <div class="skill-icon">🎒</div>
+                        <h3>AI for Productivity</h3>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="--fill: 92%"></div>
+                        </div>
+                        <span class="skill-tag">Active</span>
+                    </div>
+                    <div class="skill-card mastered" data-level="Integrated">
+                        <div class="skill-icon">⛅</div>
+                        <h3>Visual Crossing Weather API</h3>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="--fill: 80%"></div>
+                        </div>
+                        <span class="skill-tag">Integrated</span>
+                    </div>
+                    <div class="skill-card mastered" data-level="Active">
+                        <div class="skill-icon">🎨</div>
+                        <h3>Digital Art · Redbubble</h3>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="--fill: 88%"></div>
+                        </div>
+                        <span class="skill-tag">Creative Edge</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-panel" data-panel="cs" id="panel-cs">
+                <div class="skills-grid">
+                    <div class="skill-card learning" data-level="Active">
+                        <div class="skill-icon">📊</div>
+                        <h3>DSA on GeeksforGeeks</h3>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="--fill: 70%"></div>
+                        </div>
+                        <span class="skill-tag learning-tag">Active Practice</span>
+                    </div>
+                    <div class="skill-card mastered" data-level="Core">
+                        <div class="skill-icon">🔷</div>
+                        <h3>C / C++</h3>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="--fill: 75%"></div>
+                        </div>
+                        <span class="skill-tag">Core</span>
+                    </div>
+                    <div class="skill-card mastered" data-level="Core">
+                        <div class="skill-icon">🐍</div>
+                        <h3>Python (Basics)</h3>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="--fill: 65%"></div>
+                        </div>
+                        <span class="skill-tag">Core</span>
+                    </div>
+                    <div class="skill-card mastered" data-level="Active">
+                        <div class="skill-icon">🐙</div>
+                        <h3>Git & GitHub</h3>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="--fill: 80%"></div>
+                        </div>
+                        <span class="skill-tag">Active</span>
+                    </div>
+                    <div class="skill-card mastered" data-level="Solid">
+                        <div class="skill-icon">🖥️</div>
+                        <h3>OS & Networking Concepts</h3>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="--fill: 70%"></div>
+                        </div>
+                        <span class="skill-tag">Solid</span>
+                    </div>
+                    <div class="skill-card learning" data-level="Active">
+                        <div class="skill-icon">🌐</div>
+                        <h3>Problem Solving</h3>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="--fill: 72%"></div>
+                        </div>
+                        <span class="skill-tag learning-tag">Always Sharpening</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <div class="section-label mono">
+                <span class="label-line"></span>
+                <span>03 &nbsp;/&nbsp; projects.showcase</span>
+            </div>
+
+            <h2 class="section-title reveal-up">What I've<br /><span class="gradient-text">Actually Built.</span></h2>
+            <p class="section-sub reveal-up">Real projects. Real APIs. Real problems solved. No tutorial clones.</p>
+
+            <div class="projects-grid reveal-up">
+
+                <!-- 1. Portfolio Generator — Featured -->
+                <div class="project-card featured" id="proj-portfolio-gen">
+                    <div class="project-card-top">
+                        <div class="project-tag">⭐ Featured</div>
+                        <div class="project-links">
+                            <a href="https://github.com/shivanshmakwana913-droid/Portfolio-Generator" target="_blank"
+                                rel="noopener" aria-label="GitHub">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.929.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-icon-big">🛠️</div>
+                    <h3>Portfolio Generator</h3>
+                    <p>Generate <strong>multiple styled portfolios</strong> by entering your info — supports different
+                        themes and layouts. Built to help developers instantly create professional portfolio pages
+                        without starting from scratch.</p>
+                    <div class="project-stack">
+                        <span>JavaScript</span><span>HTML</span><span>CSS</span><span>Themes</span>
+                    </div>
+                </div>
+
+                <!-- 2. My Portfolio -->
+                <div class="project-card" id="proj-my-portfolio">
+                    <div class="project-card-top">
+                        <div class="project-tag tag-blue">Personal</div>
+                        <div class="project-links">
+                            <a href="https://github.com/shivanshmakwana913-droid/My-Portfolio" target="_blank"
+                                rel="noopener" aria-label="GitHub">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.929.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-icon-big">�</div>
+                    <h3>My Portfolio</h3>
+                    <p>My personal developer portfolio — showcasing <strong>projects, skills, and everything I've been
+                            building</strong>. Designed from scratch to reflect my identity as a developer: clean, bold,
+                        and purposeful.</p>
+                    <div class="project-stack">
+                        <span>JavaScript</span><span>HTML</span><span>CSS</span>
+                    </div>
+                </div>
+
+                <!-- 3. Neon Tic-Tac-Toe -->
+                <div class="project-card" id="proj-tictactoe">
+                    <div class="project-card-top">
+                        <div class="project-tag tag-purple">Game</div>
+                        <div class="project-links">
+                            <a href="https://github.com/shivanshmakwana913-droid/tic-tac-toe-neon" target="_blank"
+                                rel="noopener" aria-label="GitHub">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.929.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-icon-big">�</div>
+                    <h3>Tic-Tac-Toe Neon</h3>
+                    <p>A visually striking <strong>neon-themed Tic-Tac-Toe game</strong> built with pure CSS mastery.
+                        Glowing effects, smooth transitions, and clean game logic — proof that even simple ideas can
+                        look stunning when crafted right.</p>
+                    <div class="project-stack">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Neon UI</span>
+                    </div>
+                </div>
+
+                <!-- 4. Expense Tracker -->
+                <div class="project-card" id="proj-expense">
+                    <div class="project-card-top">
+                        <div class="project-tag tag-green">Web App</div>
+                        <div class="project-links">
+                            <a href="https://github.com/shivanshmakwana913-droid/expense-tracker" target="_blank"
+                                rel="noopener" aria-label="GitHub">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.929.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-icon-big">💰</div>
+                    <h3>Expense Tracker</h3>
+                    <p>A <strong>simple, responsive Expense Tracker web app</strong> to manage income and expenses with
+                        real-time balance tracking and <strong>localStorage persistence</strong> — no backend needed,
+                        data survives refresh.</p>
+                    <div class="project-stack">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>LocalStorage</span>
+                    </div>
+                </div>
+
+                <!-- 5. Prime Architect Website -->
+                <div class="project-card" id="proj-architect">
+                    <div class="project-card-top">
+                        <div class="project-tag">Client Site</div>
+                        <div class="project-links">
+                            <a href="https://github.com/shivanshmakwana913-droid/prime-architect-website"
+                                target="_blank" rel="noopener" aria-label="GitHub">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.929.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-icon-big">�️</div>
+                    <h3>Prime Architect Website</h3>
+                    <p>A professional <strong>business website for an architecture firm</strong> — clean layout,
+                        structured sections, and a design that communicates premium quality. Real-world client-style
+                        project built with semantic HTML.</p>
+                    <div class="project-stack">
+                        <span>HTML</span><span>CSS</span><span>Responsive Design</span>
+                    </div>
+                </div>
+
+                <!-- 6. Art Delivery System -->
+                <div class="project-card" id="proj-art-delivery">
+                    <div class="project-card-top">
+                        <div class="project-tag tag-purple">System</div>
+                        <div class="project-links">
+                            <a href="https://github.com/shivanshmakwana913-droid/art_delivery" target="_blank"
+                                rel="noopener" aria-label="GitHub">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.929.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-icon-big">🎨</div>
+                    <h3>Art Delivery System</h3>
+                    <p>A <strong>digital art delivery platform</strong> connecting artists and buyers — built to explore
+                        system design thinking early. Combines my passion for digital art with real software
+                        architecture challenges.</p>
+                    <div class="project-stack">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>System Design</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="projects-cta reveal-up">
+                <a href="https://github.com/shivanshmakwana913-droid?tab=repositories" target="_blank" rel="noopener"
+                    class="btn btn-ghost" id="btn-all-projects">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.929.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                    </svg>
+                    <span>View All Repositories on GitHub</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ JOURNEY / LEARNING PATH ============ -->
+    <section class="section journey" id="journey">
+        <div class="container">
+            <div class="section-label mono">
+                <span class="label-line"></span>
+                <span>04 &nbsp;/&nbsp; learning_path.md</span>
+            </div>
+
+            <h2 class="section-title reveal-up">The Path I'm<br /><span class="gradient-text">Carving Out.</span></h2>
+            <p class="section-sub reveal-up">This isn't a textbook roadmap. This is a real journey — raw, rapid, and
+                intentional.</p>
+
+            <div class="timeline reveal-up">
+
+                <div class="timeline-item" id="tl-0">
+                    <div class="timeline-dot done"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge done-badge">Completed ✅</div>
+                        <h3>Frontend Mastery</h3>
+                        <p>Crushed HTML, CSS, and vanilla JavaScript from ground up. Built fully responsive, animated
+                            UIs from scratch. Understood the DOM, event loop, async JS, and browser rendering pipeline.
+                            Frontend is not a chapter — it's a weapon.</p>
+                        <div class="timeline-tags">
+                            <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Animations</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" id="tl-1">
+                    <div class="timeline-dot done"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge done-badge">Level Up ✅</div>
+                        <h3>React & Component Architecture</h3>
+                        <p>Moved from vanilla to React — hooks, state management, component trees, props flow, and SPA
+                            routing. Understood why React exists and when NOT to use it. Built real projects, not
+                            tutorial apps.</p>
+                        <div class="timeline-tags">
+                            <span>React.js</span><span>useState/useEffect</span><span>React Router</span><span>Component
+                                Design</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" id="tl-2">
+                    <div class="timeline-dot done"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge done-badge">Shipped ✅</div>
+                        <h3>Real API Integration</h3>
+                        <p>Integrated the <strong>Visual Crossing Weather API</strong> into a live project. Understood
+                            HTTP, JSON parsing, async/await, error handling, and CORS. APIs stopped being scary — they
+                            became raw power.</p>
+                        <div class="timeline-tags">
+                            <span>REST APIs</span><span>Fetch/Axios</span><span>Async JS</span><span>Visual
+                                Crossing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item active-item" id="tl-3">
+                    <div class="timeline-dot current pulse-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge current-badge">🔥 In Progress</div>
+                        <h3>Backend Conquest — Node.js, Express & Databases</h3>
+                        <p>Currently deep in server-side development. Learning Node.js runtime, Express routing,
+                            middleware patterns, MongoDB with Mongoose, and RESTful API design. Every day the full-stack
+                            vision gets sharper.</p>
+                        <div class="timeline-tags">
+                            <span>Node.js</span><span>Express</span><span>MongoDB</span><span>REST API
+                                Design</span><span>JWT Auth</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item future-item" id="tl-4">
+                    <div class="timeline-dot future-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge future-badge">⚡ Next Target</div>
+                        <h3>Full-Stack Product Launch + DevOps Basics</h3>
+                        <p>Building and deploying a complete full-stack SaaS — frontend + backend + database, deployed
+                            on a cloud platform with CI/CD. Not a side project — a real product that solves a real
+                            problem.</p>
+                        <div class="timeline-tags">
+                            <span>Full-Stack App</span><span>Deployment</span><span>CI/CD Basics</span><span>Cloud
+                                Hosting</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item future-item" id="tl-5">
+                    <div class="timeline-dot future-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge future-badge">🚀 Vision</div>
+                        <h3>AI-Integrated Full-Stack Developer</h3>
+                        <p>The end goal: a full-stack developer who integrates AI into product logic — not as a gimmick,
+                            but as a core feature. Think LLM APIs, smart recommendations, and AI-powered user
+                            experiences at scale.</p>
+                        <div class="timeline-tags">
+                            <span>OpenAI API</span><span>LLM Integration</span><span>AI
+                                Products</span><span>Scale</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-label mono">
+                <span class="label-line"></span>
+                <span>05 &nbsp;/&nbsp; contact.init()</span>
+            </div>
+
+            <div class="contact-inner">
+                <div class="contact-text reveal-left">
+                    <h2 class="section-title">Let's Build<br /><span class="gradient-text">Something Real.</span></h2>
+                    <p class="about-p">
+                        Whether you're a startup looking for a hungry developer, an engineering team scouting next-gen
+                        interns, or just a fellow builder who wants to collab — my inbox is always open.
+                    </p>
+                    <p class="about-p">
+                        I don't do boring. I don't do half-measures. If you bring the vision, I bring the code, the
+                        design sense, and the fire to make it real.
+                    </p>
+
+                    <div class="contact-links">
+                        <a href="mailto:shivanshmakwana913@gmail.com" class="contact-link" id="contact-email">
+                            <div class="cl-icon">📧</div>
+                            <div class="cl-info">
+                                <span class="cl-label">Email</span>
+                                <span class="cl-value">shivanshmakwana913@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="https://github.com/shivanshmakwana913-droid" target="_blank" rel="noopener"
+                            class="contact-link" id="contact-github">
+                            <div class="cl-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.929.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                                </svg>
+                            </div>
+                            <div class="cl-info">
+                                <span class="cl-label">GitHub</span>
+                                <span class="cl-value">github.com/shivanshmakwana913-droid</span>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/shivansh-makwana-a5bbb93a2" target="_blank" rel="noopener"
+                            class="contact-link" id="contact-linkedin">
+                            <div class="cl-icon">💼</div>
+                            <div class="cl-info">
+                                <span class="cl-label">LinkedIn</span>
+                                <span class="cl-value">linkedin.com/in/shivansh-makwana-a5bbb93a2</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrap reveal-right">
+                    <form class="contact-form" id="contact-form" onsubmit="handleFormSubmit(event)">
+                        <div class="form-group">
+                            <label for="cf-name" class="mono">Your Name</label>
+                            <input type="text" id="cf-name" name="name" placeholder="John Doe" required
+                                autocomplete="name" />
+                        </div>
+                        <div class="form-group">
+                            <label for="cf-email" class="mono">Email</label>
+                            <input type="email" id="cf-email" name="email" placeholder="you@company.com" required
+                                autocomplete="email" />
+                        </div>
+                        <div class="form-group">
+                            <label for="cf-subject" class="mono">What's this about?</label>
+                            <input type="text" id="cf-subject" name="subject"
+                                placeholder="Internship / Collab / Just vibes" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="cf-message" class="mono">Your Message</label>
+                            <textarea id="cf-message" name="message" rows="4"
+                                placeholder="Tell me about your vision, project, or opportunity..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary full-width" id="btn-send">
+                            <span>Send It 🚀</span>
+                            <div class="btn-glow"></div>
+                        </button>
+                        <p class="form-success" id="form-success" style="display:none;">✅ Message received! I'll get
+                            back within 24 hours.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-logo">
+                    <span class="logo-bracket">&lt;</span>SM<span class="logo-bracket">/&gt;</span>
+                </div>
+                <p class="footer-copy mono">
+                    Designed & Coded by <strong>Shivansh Makwana</strong> · 2024 · Built with ❤️ + ⚡ in Ujjain
+                </p>
+                <div class="footer-links">
+                    <a href="https://github.com/shivanshmakwana913-droid" target="_blank" rel="noopener"
+                        id="footer-github">GitHub</a>
+                    <span>·</span>
+                    <a href="#contact" id="footer-contact">Contact</a>
+                    <span>·</span>
+                    <a href="#hero" id="footer-top">Back to Top ↑</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
