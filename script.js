@@ -1,263 +1,350 @@
-/* ============================================
-   SHIVANSH MAKWANA PORTFOLIO — JAVASCRIPT
-   ============================================ */
+/* ==========================================================================
+   MINIMALIST SYSTEMS ENGINE // SHIVANSH MAKWANA PORTFOLIO
+   ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // ========== LOADER ==========
-    const loader = document.getElementById('loader');
-    setTimeout(() => {
-        loader.classList.add('hide');
-        document.body.style.overflow = '';
-        startTyping();
-    }, 1800);
-    document.body.style.overflow = 'hidden';
+    // ==========================================
+    // TECHNICAL DATA SYSTEM
+    // ==========================================
+    const skillsData = {
+        frontend: [
+            { name: "Semantics & HTML5", level: 95, desc: "Building semantic, SEO-optimized structures for client accessibility and structural indexing." },
+            { name: "Dynamic CSS / Layouts", level: 90, desc: "Creating responsive design systems, layout constraints, modern flex/grid models, and fluid transitions." },
+            { name: "JavaScript Core (ES6+)", level: 88, desc: "Asynchronous task structures, promises, event loop delegation, and browser DOM pipeline controls." },
+            { name: "React.js Framework", level: 82, desc: "Engineering modular component state controls, custom hooks, context stores, and virtual DOM architectures." },
+            { name: "Tailwind CSS Node", level: 78, desc: "Sleek utility-first style assembly, custom configurations, and optimized design tokens compilation." },
+            { name: "REST API Integration", level: 85, desc: "Establishing secure HTTP requests, parsing data payloads, custom promises structures, and fetch cycles." }
+        ],
+        backend: [
+            { name: "NodeJS Server Runtime", level: 65, desc: "Configuring server runtime environments, asynchronous task loops, and event-driven architecture." },
+            { name: "ExpressJS Framework", level: 60, desc: "Developing RESTful API endpoints, MVC route architectures, custom validations, and middleware pipelines." },
+            { name: "MongoDB Core Database", level: 50, desc: "Designing NoSQL document schemas, database collections query filters, and collections indexes." },
+            { name: "SQL Relational Matrices", level: 55, desc: "Defining schema relationships, structured query language commands, and database normalization rules." },
+            { name: "Secure JWT Authentication", level: 45, desc: "Implementing JSON Web Token authentications, secure sign-in states, and route guard middleware." },
+            { name: "API Synthesis", level: 85, desc: "Integrating third-party APIs (e.g. Visual Crossing weather services) and processing remote data feeds." }
+        ],
+        ai: [
+            { name: "Cloud Deployments & Hosting", level: 80, desc: "Configuring production builds and CI/CD pipelines across Vercel, Netlify, Render, and cloud hosting." },
+            { name: "Git & GitHub Orchestration", level: 85, desc: "Managing collaborative code repositories, pull requests, structured branching workflows, and version conflicts." },
+            { name: "OpenAI GPT-4", level: 90, desc: "Designing system completion prompt maps, parsing chat payloads, and automating backend helper scripts." },
+            { name: "Google Gemini Core API", level: 88, desc: "Integrating Gemini language models, custom AI automation agents, and semantic text analysis tasks." },
+            { name: "Tools & Scripting", level: 85, desc: "Developing automated pipelines, terminal workflows execution, and digital conceptual design assets." },
+            { name: "Visual Crossing weather node", level: 80, desc: "External meteorological API configurations, metrics mapping, and live data telemetry charts." }
+        ],
+        cs: [
+            { name: "Data Structures & GFG", level: 70, desc: "Applying optimal search, sorting, arrays, trees, lists, and time complexity bounds." },
+            { name: "C / C++ Infrastructure", level: 75, desc: "Structuring basic system scripts, dynamic allocations, and memory resource optimization logic." },
+            { name: "Python Automation", level: 65, desc: "Writing utility scripts, files data parsers, and command line tools architectures." },
+            { name: "Operating Systems", level: 70, desc: "Understanding memory resource management, process scheduling threads, and virtual systems." },
+            { name: "Networking Matrices", level: 70, desc: "Client-server handshake protocols, TCP/IP layouts, CORS configurations, and web sockets." }
+        ]
+    };
 
+    const projectsData = [
+        {
+            id: "portfolio-generator",
+            title: "PORTFOLIO GENERATOR CORE",
+            tag: "Featured System",
+            desc: "A digital portfolio generator enabling builders to dynamically build custom layout templates according to their inputs.",
+            stack: ["HTML", "CSS", "Vanilla JS", "Themes Engine"],
+            github: "https://github.com/shivanshmakwana913-droid/Portfolio-Generator"
+        },
+        {
+            id: "my-portfolio",
+            title: "MY PORTFOLIO GATEWAY v1",
+            tag: "Personal Site",
+            desc: "The predecessor core: a sleek web portfolio detailing project schematics, skill catalogs, and direct contact uplinks.",
+            stack: ["HTML", "CSS", "JavaScript"],
+            github: "https://github.com/shivanshmakwana913-droid/My-Portfolio"
+        },
+        {
+            id: "tic-tac-toe",
+            title: "TIC-TAC-TOE NEON SYSTEM",
+            tag: "Interactive Game",
+            desc: "A neat Tic-Tac-Toe browser game designed with customized neon layout properties and responsive logic engines.",
+            stack: ["HTML5", "CSS Glow-Warp", "JavaScript Logic"],
+            github: "https://github.com/shivanshmakwana913-droid/tic-tac-toe-neon"
+        },
+        {
+            id: "expense-tracker",
+            title: "EXPENSE TRACKER TELEMETRY",
+            tag: "Data Tracker App",
+            desc: "A transaction log system displaying real-time balance calculations while locking data safely inside LocalStorage.",
+            stack: ["HTML5", "CSS", "JS", "LocalStorage API"],
+            github: "https://github.com/shivanshmakwana913-droid/expense-tracker"
+        },
+        {
+            id: "prime-architect",
+            title: "PRIME ARCHITECT WEBSITE",
+            tag: "Client Production",
+            desc: "A clean architectural portfolio page designed for an architectural design firm. Heavy utilization of grid models.",
+            stack: ["HTML", "CSS Grid", "Responsive Design"],
+            github: "https://github.com/shivanshmakwana913-droid/prime-architect-website"
+        },
+        {
+            id: "art-delivery",
+            title: "ART DELIVERY ARCHITECTURE",
+            tag: "Transaction Engine",
+            desc: "A design concept pipeline built to connect digital graphic artists with print art collectors.",
+            stack: ["HTML Core", "CSS Cards", "Modular JS Flow"],
+            github: "https://github.com/shivanshmakwana913-droid/art_delivery"
+        }
+    ];
 
-    // ========== CUSTOM CURSOR ==========
-    const cursor = document.getElementById('cursor');
-    const follower = document.getElementById('cursor-follower');
-    let cx = 0, cy = 0, fx = 0, fy = 0;
+    const journeyTimeline = [
+        { title: "FRONTEND DEPLOYMENT CORE", badge: "Completed", desc: "Crafting fully-responsive front-ends using clean design layouts, semantic structures, and advanced page loading optimizations.", tags: ["HTML5", "CSS3 Grid", "Vanilla JS"] },
+        { title: "MERN STACK ARCHITECTURE", badge: "Active Learning", desc: "Forging dynamic MERN applications combining React hook states with backend Express.js servers, custom database models setup, and MongoDB data loops.", tags: ["React JS", "Node.js", "Express.js", "MongoDB"] },
+        { title: "GIT COLLABORATION / GITHUB", badge: "Active Practice", desc: "Establishing strict version control habits. Performing repository merges, managing branches, opening pull requests, and standardizing team documentation.", tags: ["Git CLI", "GitHub Repos", "Merge Workflows"] },
+        { title: "CLOUD DEPLOYMENT PATHWAY", badge: "Active Sync", desc: "Hosting production-ready deployments on Vercel, Netlify, and Render, configuring custom environment configurations, and checking analytics metrics.", tags: ["Vercel Hosting", "Render Serves", "Netlify Builds"] },
+        { title: "INTELLIGENT AI SYSTEM PIPELINES", badge: "Future Spec", desc: "Connecting advanced LLM capabilities directly inside development workflows (e.g. OpenAI GPT-4, Google Gemini APIs, auto-generation scripts).", tags: ["AI integrations", "Gemini API", "APIs Automation"] },
+        { title: "COGNITIVE INTELLIGENT AGENT SYNCHRONIZER", badge: "Future Spec", desc: "Integrating advanced LLM routing logic directly into application loops. Shaping functional AI agents, vector databases, and real-time recommendations engines.", tags: ["AI APIs", "Vector Database", "Intelligent Automation Core"] }
+    ];
 
-    document.addEventListener('mousemove', e => {
-        cx = e.clientX; cy = e.clientY;
-        cursor.style.left = cx + 'px';
-        cursor.style.top = cy + 'px';
+    // ==========================================
+    // SLEEK LAG CURSOR FOLLOW OBJECT
+    // ==========================================
+    const sCursor = document.getElementById('s-cursor');
+    const sFollower = document.getElementById('s-follower');
+    let mX = 0, mY = 0, fX = 0, fY = 0;
+
+    document.addEventListener('mousemove', (e) => {
+        mX = e.clientX;
+        mY = e.clientY;
+        sCursor.style.left = `${mX}px`;
+        sCursor.style.top = `${mY}px`;
     });
 
-    function animateCursor() {
-        fx += (cx - fx) * 0.12;
-        fy += (cy - fy) * 0.12;
-        follower.style.left = fx + 'px';
-        follower.style.top = fy + 'px';
-        requestAnimationFrame(animateCursor);
+    function renderFollower() {
+        fX += (mX - fX) * 0.12;
+        fY += (mY - fY) * 0.12;
+        sFollower.style.left = `${fX}px`;
+        sFollower.style.top = `${fY}px`;
+        requestAnimationFrame(renderFollower);
     }
-    animateCursor();
+    renderFollower();
 
-    document.querySelectorAll('a, button, .project-card, .skill-card, .tab-btn').forEach(el => {
+    // Scale cursor on hover
+    document.querySelectorAll('a, button, .bento-item, .arsenal-tab, .project-card').forEach(el => {
         el.addEventListener('mouseenter', () => {
-            cursor.style.transform = 'translate(-50%, -50%) scale(2)';
-            cursor.style.background = 'rgba(79, 140, 255, 0.5)';
-            follower.style.width = '50px';
-            follower.style.height = '50px';
+            sFollower.classList.add('hovering');
+            sCursor.classList.add('hovering');
         });
         el.addEventListener('mouseleave', () => {
-            cursor.style.transform = 'translate(-50%, -50%) scale(1)';
-            cursor.style.background = 'var(--accent)';
-            follower.style.width = '30px';
-            follower.style.height = '30px';
+            sFollower.classList.remove('hovering');
+            sCursor.classList.remove('hovering');
         });
     });
 
+    // ==========================================
+    // FLOATING GRADIENT AMBIENT EFFECT
+    // ==========================================
+    const ambient = document.getElementById('ambient-glow');
+    document.addEventListener('mousemove', (e) => {
+        const x = (e.clientX / window.innerWidth) * 100;
+        const y = (e.clientY / window.innerHeight) * 100;
 
-    // ========== TYPING EFFECT ==========
-    const phrases = [
-        'Write Code.',
-        'Solve Problems.',
-        'Ship Products.',
-        'Learn Fast.',
-        'Build the Future.',
-    ];
-    let phraseIdx = 0, charIdx = 0, isDeleting = false;
-    const typedEl = document.getElementById('typed-text');
+        // Quietly move ambient background glowing elements
+        ambient.style.setProperty('--x', `${x}%`);
+        ambient.style.setProperty('--y', `${y}%`);
+    });
 
-    function startTyping() {
-        if (!typedEl) return;
-        typeLoop();
+    // ==========================================
+    // TECHNICAL ARSENAL: CARD LOGIC
+    // ==========================================
+    const arsenalGrid = document.getElementById('arsenal-grid');
+    const arsenalTabs = document.querySelectorAll('.arsenal-tab');
+
+    function renderArsenal(groupId) {
+        if (!arsenalGrid) return;
+        arsenalGrid.innerHTML = '';
+        const data = skillsData[groupId];
+
+        data.forEach((skill, idx) => {
+            const card = document.createElement('div');
+            card.className = 'arsenal-card';
+            card.innerHTML = `
+                <div class="arsenal-card-head">
+                    <span class="a-title font-main">${skill.name}</span>
+                    <span class="a-level mono">${skill.level}%</span>
+                </div>
+                <div class="a-bar">
+                    <div class="a-bar-fill" style="width: 0%"></div>
+                </div>
+                <p class="a-desc font-main">${skill.desc}</p>
+            `;
+            arsenalGrid.appendChild(card);
+
+            setTimeout(() => {
+                const fill = card.querySelector('.a-bar-fill');
+                if (fill) fill.style.width = `${skill.level}%`;
+            }, idx * 40 + 50);
+        });
     }
 
-    function typeLoop() {
-        const current = phrases[phraseIdx];
-        if (isDeleting) {
-            typedEl.textContent = current.substring(0, charIdx - 1);
-            charIdx--;
-        } else {
-            typedEl.textContent = current.substring(0, charIdx + 1);
-            charIdx++;
-        }
+    renderArsenal('frontend');
 
-        let delay = isDeleting ? 60 : 110;
+    arsenalTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            arsenalTabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            renderArsenal(tab.dataset.tab);
+        });
+    });
 
-        if (!isDeleting && charIdx === current.length) {
-            delay = 2000;
-            isDeleting = true;
-        } else if (isDeleting && charIdx === 0) {
-            isDeleting = false;
-            phraseIdx = (phraseIdx + 1) % phrases.length;
-            delay = 400;
-        }
+    // ==========================================
+    // DYNAMIC PROJECT ARRAYS GENERATOR
+    // ==========================================
+    const projectsGrid = document.getElementById('projects-grid');
 
-        setTimeout(typeLoop, delay);
+    function populateProjects() {
+        if (!projectsGrid) return;
+        projectsGrid.innerHTML = '';
+
+        projectsData.forEach(proj => {
+            const card = document.createElement('a');
+            card.href = proj.github;
+            card.target = "_blank";
+            card.rel = "noopener";
+            card.className = 'project-card';
+            card.innerHTML = `
+                <div class="project-card-header">
+                    <span class="p-card-tag mono">${proj.tag}</span>
+                    <svg class="p-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                        <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                </div>
+                <h3 class="project-card-title font-main">${proj.title}</h3>
+                <p class="project-card-desc font-main">${proj.desc}</p>
+                <div class="project-card-stack">
+                    ${proj.stack.map(s => `<span class="p-tag mono">${s}</span>`).join('')}
+                </div>
+            `;
+            projectsGrid.appendChild(card);
+        });
     }
+    populateProjects();
 
+    // ==========================================
+    // DYNAMIC TIMELINE PROGRESSION VECTOR
+    // ==========================================
+    const timelineWrapper = document.getElementById('timeline-wrapper');
 
-    // ========== NAVBAR SCROLL ==========
+    function populateTimeline() {
+        if (!timelineWrapper) return;
+        timelineWrapper.innerHTML = '';
+
+        journeyTimeline.forEach((point) => {
+            const node = document.createElement('div');
+            node.className = 'timeline-node';
+            node.innerHTML = `
+                <div class="node-marker"></div>
+                <div class="node-content">
+                    <div class="node-badge-wrap">
+                        <span class="node-badge mono">${point.badge}</span>
+                    </div>
+                    <h3 class="node-title font-main">${point.title}</h3>
+                    <p class="node-desc font-main">${point.desc}</p>
+                    <div class="node-tags">
+                        ${point.tags.map(t => `<span class="node-tag-item mono">${t}</span>`).join('')}
+                    </div>
+                </div>
+            `;
+            timelineWrapper.appendChild(node);
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        node.classList.add('focused');
+                    }
+                });
+            }, { threshold: 0.25 });
+
+            observer.observe(node);
+        });
+    }
+    populateTimeline();
+
+    // ==========================================
+    // NAVIGATION BAR MATRIX TRANSITIONS
+    // ==========================================
     const navbar = document.getElementById('navbar');
-    let lastScroll = 0;
-
     window.addEventListener('scroll', () => {
-        const scrollY = window.scrollY;
-        if (scrollY > 60) {
+        if (window.scrollY > 40) {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
         }
-        lastScroll = scrollY;
     });
 
+    const menuToggle = document.getElementById('hamburger-menu');
+    const navMenu = document.getElementById('nav-menu');
 
-    // ========== HAMBURGER MENU ==========
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('nav-links');
-
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('open');
-        navLinks.classList.toggle('open');
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('open');
+        navMenu.classList.toggle('open');
     });
 
-    document.querySelectorAll('.nav-link').forEach(link => {
+    document.querySelectorAll('.nav-menu-link').forEach(link => {
         link.addEventListener('click', () => {
-            hamburger.classList.remove('open');
-            navLinks.classList.remove('open');
+            menuToggle.classList.remove('open');
+            navMenu.classList.remove('open');
         });
     });
 
+    // ==========================================
+    // LIGHT THEME SWITCH DETECTOR
+    // ==========================================
+    const themeToggle = document.getElementById('theme-toggle');
+    const sunIcon = themeToggle.querySelector('.sun-icon');
+    const moonIcon = themeToggle.querySelector('.moon-icon');
 
-    // ========== SCROLL REVEAL ==========
-    const observerOpts = { threshold: 0.12, rootMargin: '0px 0px -40px 0px' };
-    const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                // animate skill bars when visible
-                if (entry.target.classList.contains('skills-grid')) {
-                    animateSkillBars();
-                }
-            }
-        });
-    }, observerOpts);
-
-    document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right').forEach(el => {
-        revealObserver.observe(el);
+    themeToggle.addEventListener('click', () => {
+        const isLight = document.body.classList.toggle('light-theme');
+        if (isLight) {
+            sunIcon.style.display = 'none';
+            moonIcon.style.display = 'block';
+        } else {
+            sunIcon.style.display = 'block';
+            moonIcon.style.display = 'none';
+        }
     });
 
-
-    // ========== PARTICLES ==========
-    const particlesContainer = document.getElementById('particles');
-    function createParticle() {
-        if (!particlesContainer) return;
-        const p = document.createElement('div');
-        p.className = 'particle';
-        const size = Math.random() * 3 + 1;
-        const colors = ['var(--accent)', 'var(--accent-cyan)', 'var(--accent-alt)', 'var(--accent-pink)'];
-        const color = colors[Math.floor(Math.random() * colors.length)];
-        p.style.cssText = `
-      width: ${size}px;
-      height: ${size}px;
-      left: ${Math.random() * 100}%;
-      bottom: ${Math.random() * 30}%;
-      background: ${color};
-      animation-duration: ${6 + Math.random() * 8}s;
-      animation-delay: ${Math.random() * 4}s;
-    `;
-        particlesContainer.appendChild(p);
-        setTimeout(() => p.remove(), 14000);
-    }
-
-    // Create particles periodically
-    setInterval(createParticle, 600);
-    for (let i = 0; i < 15; i++) {
-        setTimeout(createParticle, i * 200);
-    }
-
-
-    // ========== SKILL TABS ==========
-    const tabBtns = document.querySelectorAll('.tab-btn');
-    const panels = document.querySelectorAll('.skills-panel');
-
-    tabBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const target = btn.dataset.tab;
-
-            tabBtns.forEach(b => b.classList.remove('active'));
-            panels.forEach(p => p.classList.remove('active'));
-
-            btn.classList.add('active');
-            const activePanel = document.getElementById(`panel-${target}`);
-            if (activePanel) {
-                activePanel.classList.add('active');
-                setTimeout(animateSkillBars, 100);
-            }
-        });
-    });
-
-
-    // ========== SKILL BAR ANIMATION ==========
-    function animateSkillBars() {
-        document.querySelectorAll('.skills-panel.active .skill-fill').forEach(fill => {
-            const target = fill.style.getPropertyValue('--fill');
-            fill.style.setProperty('--fill', '0%');
-            setTimeout(() => {
-                fill.style.setProperty('--fill', target);
-            }, 50);
+    // ==========================================
+    // REAL-TIME 3D PARALLAX RUNNER
+    // ==========================================
+    const avatarWrapper = document.querySelector('.mouse-parallax');
+    if (avatarWrapper) {
+        document.addEventListener('mousemove', (e) => {
+            const ax = (window.innerWidth / 2 - e.clientX) * 0.05;
+            const ay = (window.innerHeight / 2 - e.clientY) * 0.05;
+            avatarWrapper.style.transform = `rotateY(${-ax}deg) rotateX(${ay}deg)`;
         });
     }
 
-
-    // ========== PROJECT CARD GLOW ==========
-    document.querySelectorAll('.project-card').forEach(card => {
-        card.addEventListener('mousemove', e => {
-            const rect = card.getBoundingClientRect();
-            const x = ((e.clientX - rect.left) / rect.width) * 100;
-            const y = ((e.clientY - rect.top) / rect.height) * 100;
-            card.style.setProperty('--mx', x + '%');
-            card.style.setProperty('--my', y + '%');
-        });
-    });
-
-
-    // ========== SMOOTH ACTIVE NAV LINK ==========
-    const sections = document.querySelectorAll('section[id]');
-    const navLinkEls = document.querySelectorAll('.nav-link');
-
-    const sectionObserver = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                navLinkEls.forEach(link => {
-                    link.style.color = '';
-                    if (link.getAttribute('href') === '#' + entry.target.id) {
-                        link.style.color = 'var(--accent)';
-                    }
-                });
-            }
-        });
-    }, { threshold: 0.5 });
-
-    sections.forEach(s => sectionObserver.observe(s));
-
-
-    // ========== CONTACT FORM ==========
+    // ==========================================
+    // TRANSCEIVER FORM SUBMIT PAYLOADS
+    // ==========================================
     window.handleFormSubmit = function (e) {
         e.preventDefault();
-        const btn = document.getElementById('btn-send');
-        const success = document.getElementById('form-success');
-        btn.querySelector('span').textContent = 'Sending... ⚡';
-        btn.disabled = true;
+        const submitBtn = document.getElementById('btn-send');
+        const successLog = document.getElementById('form-success');
+
+        submitBtn.disabled = true;
+        submitBtn.querySelector('span').textContent = "Dispatching metrics...";
 
         setTimeout(() => {
-            btn.querySelector('span').textContent = 'Sent! ✅';
-            success.style.display = 'block';
+            submitBtn.querySelector('span').textContent = "Message Dispatched";
+            successLog.style.display = 'block';
+
             e.target.reset();
             setTimeout(() => {
-                btn.querySelector('span').textContent = 'Send It 🚀';
-                btn.disabled = false;
-                success.style.display = 'none';
-            }, 5000);
-        }, 1500);
+                submitBtn.querySelector('span').textContent = "Send message";
+                submitBtn.disabled = false;
+                successLog.style.display = 'none';
+            }, 6000);
+        }, 1200);
     };
-
-
-    // ========== INITIAL SKILL BAR ANIMATION ==========
-    setTimeout(animateSkillBars, 2000);
 
 }); // end DOMContentLoaded
