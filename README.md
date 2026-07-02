@@ -1,14 +1,14 @@
 <div align="center">
 
-# ⚡ Shivansh Makwana — Personal Portfolio
+# ⚡ Shivansh Makwana — Mid-Indigo Personal Portfolio
 
-**`< Developer · Designer · Builder />`**
+**`< Developer · Designer · MERN Stack Builder />`**
 
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![MIT License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
-[![Portfolio](https://img.shields.io/badge/Live-Portfolio-blueviolet?style=for-the-badge&logo=vercel&logoColor=white)](https://github.com/shivanshmakwana913-droid/My-Portfolio)
+[![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/shivanshmakwana913-droid)
 
 <br/>
 
@@ -16,156 +16,99 @@
 
 <br/>
 
-A **futuristic, high-converting personal portfolio** built from scratch with pure HTML, CSS, and JavaScript.  
-No frameworks. No dependencies. Just raw frontend mastery — pixel-perfect, blazing fast, and fully responsive.
+A **futuristic, premium personal portfolio** built from scratch with a **Midnight-Indigo aesthetic**, featuring a personalizados **3D animated character avatar** with real-time mouse-tracking parallax reactions and a complete Light/Dark theme toggle.
+
+[View Live Portfolio](https://github.com/shivanshmakwana913-droid/elite-portfolio)
 
 </div>
 
 ---
 
-## 🚀 Live Preview
-
-> Open `index.html` directly in your browser — zero setup needed.  
-> Or deploy instantly to [GitHub Pages](https://pages.github.com/), [Netlify](https://netlify.com/), or [Vercel](https://vercel.com/) for free.
-
----
-
-## ✨ Features
+## 🚀 Key Features
 
 | Feature | Description |
 |---------|-------------|
-| 🎬 **Cinematic Loader** | High-tech "initializing" boot sequence on page load |
-| ✍️ **Typewriter Effect** | Dynamic headline animation cycling through key phrases |
-| 🖱️ **Custom Cursor** | Magnetic neon cursor with smooth follower effect |
-| 🌌 **Particle System** | Floating particle background in the hero section |
-| 📜 **Scroll Reveal** | Elements animate in beautifully as you scroll |
-| ⚡ **Skill Tabs** | Animated, filterable skill cards with progress bars |
-| 🃏 **Project Cards** | Hover-glow project cards with direct GitHub links |
-| 📍 **Active Nav** | Navigation auto-highlights based on current section |
-| 📱 **Fully Responsive** | Flawless layout from mobile (320px) to 4K displays |
-| 🎨 **Glassmorphism UI** | Premium dark theme with neon accents and glass effects |
+| � **Theme Switcher** | Instant toggle between Midnight-Indigo dark mode & sleek Apple-style light mode |
+| 🕴️ **3D Avatar & Parallax** | Disney/Pixar styled animated character avatar that floats and tilts dynamically following mouse cursor in real time |
+| 🎨 **Bento Grid Layout** | Modern card-based grid dashboard highlighting specialized MERN stack expertise |
+| 🎬 **Cinematic Boot** | High-tech "initializing system matrix" boot sequence on page load |
+| 🖱️ **Magnetic Cursor** | Custom neon violet halo cursor with fluid screen following physics |
+| 📍 **Responsive Architecture** | Optimized fluid grids adapting flawlessly from 320px mobile views to 4K displays |
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Advanced Tech Stack & Arsenal
 
-```
-Frontend Only — No build tools, no npm, no frameworks.
-```
-
-| Layer | Tech |
-|-------|------|
-| **Structure** | HTML5 (Semantic) |
-| **Styling** | CSS3 (Variables, Grid, Flexbox, Animations) |
-| **Logic** | Vanilla JavaScript (ES6+) |
-| **Fonts** | Google Fonts — Outfit, Space Grotesk, JetBrains Mono |
-| **Icons** | SVG (Inline, no dependencies) |
+- **Frontend Core**: Vanilla Semantic HTML5, Custom CSS3 Variables, ES6+ Javascript DOM Engine
+- **Skills Showcase**:
+  - **MERN Stack Architecture** (React.js, Node.js, Express.js, MongoDB)
+  - **Version Control & Repository Operations** (Git, GitHub, CI/CD Actions)
+  - **Automated Cloud Deployments** (Vercel, Render, Netlify)
+- **Design Tokens**: Plus Jakarta Sans layout typography, JetBrains Mono console typography, custom linear CSS ambient accents
 
 ---
 
 ## 📁 Project Structure
 
 ```
-portfolio/
+elite-portfolio/
 │
-├── 📄 index.html          # Main HTML — all 6 sections
-├── 🎨 style.css           # Complete design system & animations
-├── ⚡ script.js           # All interactivity & dynamic behavior
+├── 📄 index.html          # Main capsule layout (6 sections + Bento elements)
+├── 🎨 style.css           # Design tokens, variables, keyframe animations & light overrides
+├── ⚡ script.js           # UI engines, 3D mouse parallax math, theme toggle, and JSON timelines
 │
 └── 📁 assets/
-    └── 🖼️ profile.png     # Developer avatar
-```
-
----
-
-## 📌 Sections
-
-```
-01 / about_me.js        → Who I am, what I'm building, why I'm different
-02 / tech_stack.json    → Skills arsenal — Frontend, Backend, AI & Tools, CS Core
-03 / projects.showcase  → 6 real GitHub projects with direct links
-04 / learning_path.md   → My actual journey — completed, in-progress, vision
-05 / contact.init()     → Contact form + Email, GitHub, LinkedIn links
+    └── 🖼️ avatar_3d.png   # Custom 3D thumbs-up character avatar
 ```
 
 ---
 
 ## ⚙️ Getting Started
 
-### Option 1 — Open Directly (Instant)
+### Option 1 — Open Locally
 
 ```bash
-# Clone the repo
-git clone https://github.com/shivanshmakwana913-droid/My-Portfolio.git
+# Clone the repository
+git clone https://github.com/shivanshmakwana913-droid/elite-portfolio.git
 
-# Open in browser
-cd My-Portfolio
+# Navigate to project folder
+cd elite-portfolio
+
+# Open index.html directly
 start index.html      # Windows
-open index.html       # Mac/Linux
+open index.html       # macOS / Linux
 ```
 
-### Option 2 — Live Server (Recommended for Dev)
+### Option 2 — Cloud Deploy (Vercel CLI Setup)
+
+To deploy to production non-interactively using the Vercel CLI:
 
 ```bash
-# With VS Code Live Server extension
-# Right-click index.html → "Open with Live Server"
-```
+# Authenticate CLI
+npx vercel login
 
-### Option 3 — Deploy Free in 60 Seconds
-
-**Netlify Drop:**
-1. Go to [netlify.com/drop](https://app.netlify.com/drop)
-2. Drag the entire project folder
-3. Done ✅ — You get a live URL instantly
-
-**GitHub Pages:**
-1. Push this repo to GitHub
-2. Go to Repo → Settings → Pages
-3. Source: `main` branch → `/ (root)`
-4. Done ✅
-
----
-
-## 🎨 Design System
-
-### Color Palette
-| Token | Value | Usage |
-|-------|-------|-------|
-| `--accent` | `#4F8CFF` | Primary blue — links, highlights |
-| `--accent-cyan` | `#00D4FF` | Cyan glow — skill bars, rings |
-| `--accent-alt` | `#7C3AED` | Purple — gradient endpoints |
-| `--accent-amber` | `#FBBF24` | Amber — in-progress states |
-| `--accent-pink` | `#F472B6` | Pink — AI-powered labels |
-| `--bg-primary` | `#050810` | Deep space dark background |
-| `--bg-card` | `#0D1326` | Card backgrounds |
-
-### Typography
-```css
---font-main:  'Outfit', sans-serif      /* Headlines, body */
---font-code:  'Space Grotesk', sans-serif /* Labels, meta */
---font-mono:  'JetBrains Mono', monospace /* Code blocks */
+# Deploy instantly
+npx vercel --prod --yes
 ```
 
 ---
 
-## 🗺️ Roadmap
+## 🗺️ Roadmap & Milestones
 
-- [x] Cinematic loader sequence
-- [x] Typewriter headline animation
-- [x] Custom magnetic cursor
-- [x] Particle background system
-- [x] Scroll-reveal animations
-- [x] Tabbed skills section with progress bars
-- [x] Real project showcase (6 live GitHub repos)
-- [x] Learning path / journey timeline
-- [x] Fully responsive layout
-- [ ] Dark/Light theme toggle
-- [ ] EmailJS integration for real form submission
-- [ ] GSAP-powered advanced animations
+- [x] Cinematic system initialization boot loading screen
+- [x] Modern Bento-style grid dashboard
+- [x] Custom magnetic follow cursor
+- [x] 3D character avatar integration (showing thumbs-up & smile)
+- [x] Real-time 3D mouse parallax tilt reaction
+- [x] 🌗 Interactive Light/Dark theme switcher
+- [x] Updated tagline contrast adjustments for Light Mode readability
+- [x] Dynamic brand logo typography ("SHIV")
+- [ ] EmailJS implementation for direct Contact Form submits
+- [ ] Timeline micro-interactions via GSAP
 
 ---
 
-## 📬 Contact
+## 📬 Contact Connect
 
 <div align="center">
 
@@ -175,22 +118,10 @@ open index.html       # Mac/Linux
 | 💻 GitHub | [@shivanshmakwana913-droid](https://github.com/shivanshmakwana913-droid) |
 | 💼 LinkedIn | [Shivansh Makwana](https://www.linkedin.com/in/shivansh-makwana-a5bbb93a2) |
 
-</div>
-
----
-
-## 📄 License
-
-This project is licensed under the **MIT License** — you are free to use, modify, and distribute it.  
-If you find this project helpful, a ⭐ on GitHub would mean a lot!
-
----
-
-<div align="center">
+<br/>
 
 **Designed & Coded by [Shivansh Makwana](https://github.com/shivanshmakwana913-droid)**  
-*B.Tech CS · SGSITS, Ujjain · 2026*
-
-*Built with ❤️ + ⚡ in Ujjain, India*
+*B.Tech Computer Science · SGSITS · 2026*  
+*Built with ❤️ + ⚡ in India*
 
 </div>
