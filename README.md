@@ -116,7 +116,7 @@ npx vercel --prod --yes
 |----------|------|
 | 📧 Email | [shivanshmakwana913@gmail.com](mailto:shivanshmakwana913@gmail.com) |
 | 💻 GitHub | [@shivanshmakwana913-droid](https://github.com/shivanshmakwana913-droid) |
-| 💼 LinkedIn | [Shivansh Makwana](https://www.linkedin.com/in/shivansh-makwana-a5bbb93a2) |
+| 💼 LinkedIn | [Shivansh Makwana](https://www.linkedin.com/in/shivansh-makwana) |
 
 <br/>
 

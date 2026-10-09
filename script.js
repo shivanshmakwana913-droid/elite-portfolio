@@ -43,12 +43,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const projectsData = [
         {
+            id: "raabta-app",
+            title: "RAABTA — SOCIAL MESSAGING PLATFORM",
+            tag: "⚡ Main Flagship System",
+            desc: "A full-stack real-time social messaging platform engineered with React, Node.js, Express, MongoDB and Socket.IO for instant chat & interactive messaging.",
+            stack: ["React.js", "Node.js", "Express.js", "MongoDB", "Socket.IO"],
+            live: "https://raabta-chat-app.vercel.app/"
+        },
+        {
             id: "portfolio-generator",
             title: "PORTFOLIO GENERATOR CORE",
             tag: "Featured System",
             desc: "A digital portfolio generator enabling builders to dynamically build custom layout templates according to their inputs.",
             stack: ["HTML", "CSS", "Vanilla JS", "Themes Engine"],
-            github: "https://github.com/shivanshmakwana913-droid/Portfolio-Generator"
+            live: "https://selfolio-portfolio.vercel.app/"
         },
         {
             id: "my-portfolio",
@@ -56,49 +64,45 @@ document.addEventListener('DOMContentLoaded', () => {
             tag: "Personal Site",
             desc: "The predecessor core: a sleek web portfolio detailing project schematics, skill catalogs, and direct contact uplinks.",
             stack: ["HTML", "CSS", "JavaScript"],
-            github: "https://github.com/shivanshmakwana913-droid/My-Portfolio"
+            live: "https://selfolio-portfolio.vercel.app/"
         },
         {
             id: "tic-tac-toe",
             title: "TIC-TAC-TOE NEON SYSTEM",
             tag: "Interactive Game",
             desc: "A neat Tic-Tac-Toe browser game designed with customized neon layout properties and responsive logic engines.",
-            stack: ["HTML5", "CSS Glow-Warp", "JavaScript Logic"],
-            github: "https://github.com/shivanshmakwana913-droid/tic-tac-toe-neon"
+            stack: ["HTML5", "CSS Glow-Warp", "JavaScript Logic"]
         },
         {
             id: "expense-tracker",
             title: "EXPENSE TRACKER TELEMETRY",
             tag: "Data Tracker App",
             desc: "A transaction log system displaying real-time balance calculations while locking data safely inside LocalStorage.",
-            stack: ["HTML5", "CSS", "JS", "LocalStorage API"],
-            github: "https://github.com/shivanshmakwana913-droid/expense-tracker"
+            stack: ["HTML5", "CSS", "JS", "LocalStorage API"]
         },
         {
             id: "prime-architect",
             title: "PRIME ARCHITECT WEBSITE",
             tag: "Client Production",
             desc: "A clean architectural portfolio page designed for an architectural design firm. Heavy utilization of grid models.",
-            stack: ["HTML", "CSS Grid", "Responsive Design"],
-            github: "https://github.com/shivanshmakwana913-droid/prime-architect-website"
+            stack: ["HTML", "CSS Grid", "Responsive Design"]
         },
         {
             id: "art-delivery",
             title: "ART DELIVERY ARCHITECTURE",
             tag: "Transaction Engine",
             desc: "A design concept pipeline built to connect digital graphic artists with print art collectors.",
-            stack: ["HTML Core", "CSS Cards", "Modular JS Flow"],
-            github: "https://github.com/shivanshmakwana913-droid/art_delivery"
+            stack: ["HTML Core", "CSS Cards", "Modular JS Flow"]
         }
     ];
 
     const journeyTimeline = [
+        { title: "B.TECH COMPUTER SCIENCE & ENGINEERING", badge: "SGSITS Indore (2022-2026)", desc: "Pursuing core Computer Science degree at SGSITS, mastering Data Structures, Algorithms, Operating Systems, Computer Networks, and Software Engineering.", tags: ["B.Tech CSE", "SGSITS", "Algorithms", "CS Core"] },
+        { title: "FULL-STACK MERN SPECIALIZATION COURSE", badge: "Completed / Active", desc: "Mastered full-stack web application development across React.js frontends, Node.js & Express.js REST APIs, and MongoDB database architectures.", tags: ["React JS", "Node.js", "Express.js", "MongoDB"] },
         { title: "FRONTEND DEPLOYMENT CORE", badge: "Completed", desc: "Crafting fully-responsive front-ends using clean design layouts, semantic structures, and advanced page loading optimizations.", tags: ["HTML5", "CSS3 Grid", "Vanilla JS"] },
-        { title: "MERN STACK ARCHITECTURE", badge: "Active Learning", desc: "Forging dynamic MERN applications combining React hook states with backend Express.js servers, custom database models setup, and MongoDB data loops.", tags: ["React JS", "Node.js", "Express.js", "MongoDB"] },
         { title: "GIT COLLABORATION / GITHUB", badge: "Active Practice", desc: "Establishing strict version control habits. Performing repository merges, managing branches, opening pull requests, and standardizing team documentation.", tags: ["Git CLI", "GitHub Repos", "Merge Workflows"] },
         { title: "CLOUD DEPLOYMENT PATHWAY", badge: "Active Sync", desc: "Hosting production-ready deployments on Vercel, Netlify, and Render, configuring custom environment configurations, and checking analytics metrics.", tags: ["Vercel Hosting", "Render Serves", "Netlify Builds"] },
-        { title: "INTELLIGENT AI SYSTEM PIPELINES", badge: "Future Spec", desc: "Connecting advanced LLM capabilities directly inside development workflows (e.g. OpenAI GPT-4, Google Gemini APIs, auto-generation scripts).", tags: ["AI integrations", "Gemini API", "APIs Automation"] },
-        { title: "COGNITIVE INTELLIGENT AGENT SYNCHRONIZER", badge: "Future Spec", desc: "Integrating advanced LLM routing logic directly into application loops. Shaping functional AI agents, vector databases, and real-time recommendations engines.", tags: ["AI APIs", "Vector Database", "Intelligent Automation Core"] }
+        { title: "INTELLIGENT AI SYSTEM PIPELINES", badge: "Future Spec", desc: "Connecting advanced LLM capabilities directly inside development workflows (e.g. OpenAI GPT-4, Google Gemini APIs, auto-generation scripts).", tags: ["AI integrations", "Gemini API", "APIs Automation"] }
     ];
 
     // ==========================================
@@ -203,22 +207,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
         projectsData.forEach(proj => {
             const card = document.createElement('a');
-            card.href = proj.github;
-            card.target = "_blank";
-            card.rel = "noopener";
             card.className = 'project-card';
+            if (proj.live) {
+                card.href = proj.live;
+                card.target = "_blank";
+                card.rel = "noopener noreferrer";
+            } else {
+                card.href = "#projects";
+            }
+
             card.innerHTML = `
                 <div class="project-card-header">
                     <span class="p-card-tag mono">${proj.tag}</span>
-                    <svg class="p-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <line x1="7" y1="17" x2="17" y2="7"></line>
-                        <polyline points="7 7 17 7 17 17"></polyline>
-                    </svg>
+                    <span class="p-link-icon-wrap">
+                        <svg class="p-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                            <polyline points="7 7 17 7 17 17"></polyline>
+                        </svg>
+                    </span>
                 </div>
                 <h3 class="project-card-title font-main">${proj.title}</h3>
                 <p class="project-card-desc font-main">${proj.desc}</p>
                 <div class="project-card-stack">
                     ${proj.stack.map(s => `<span class="p-tag mono">${s}</span>`).join('')}
+                </div>
+                <div class="project-card-actions">
+                    <span class="p-action-btn p-action-live mono">
+                        <span>${proj.live ? 'Open App' : 'Project Schematic'}</span>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                    </span>
                 </div>
             `;
             projectsGrid.appendChild(card);

@@ -783,6 +783,52 @@ button {
   border-radius: 4px;
 }
 
+.project-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.p-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.p-action-live {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.25));
+  color: #a5b4fc;
+  border: 1px solid rgba(139, 92, 246, 0.4);
+}
+
+.p-action-live:hover {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(139, 92, 246, 0.35);
+}
+
+.p-action-github {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+}
+
+.p-action-github:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-active);
+  border-color: var(--border-hover);
+}
+
 /* ---------- 04. PROGRESSION VECTOR ---------- */
 .timeline-container {
   position: relative;
